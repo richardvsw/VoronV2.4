@@ -7,6 +7,7 @@ klippy_uds_address = /home/riv/printer_data/comms/klippy.sock
 trusted_clients = 
 	192.168.0.0/16
 	10.0.0.0/8
+	100.0.0.0/8
 	127.0.0.0/8
 	169.254.0.0/16
 	172.16.0.0/12
@@ -23,6 +24,9 @@ cors_domains =
 	*://app.fluidd.xyz
 
 [octoprint_compat]
+
+[file_manager]
+enable_object_processing = True
 
 [history]
 
@@ -78,4 +82,12 @@ type = git_repo
 path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
+
+[update_manager Demon_Klipper_Essentials_Unified]
+type = git_repo
+path = ~/printer_data/config/Demon_Klipper_Essentials_Unified
+origin = https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified.git
+primary_branch = main
+is_system_service = False
+managed_services = klipper
 
