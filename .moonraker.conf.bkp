@@ -91,10 +91,13 @@ primary_branch = main
 is_system_service = False
 managed_services = klipper
 
-[update_manager crowsnest]
+[update_manager Klippain-ShakeTune]
 type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
-install_script = tools/pkglist.sh
+origin = https://github.com/Frix-x/klippain-shaketune.git
+path = ~/klippain_shaketune
+virtualenv = /home/riv/klippy-env
+requirements = requirements.txt
+system_dependencies = system-dependencies.json
+primary_branch = main
+managed_services = klipper
 
